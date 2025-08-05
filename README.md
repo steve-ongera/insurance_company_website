@@ -1,6 +1,6 @@
-# Insure Insurance Company Website
+# skywave Insurance Company Website
 
-A Django-based web application for Insure Insurance Company, providing comprehensive insurance services and customer management.
+A Django-based web application for skywave Insurance Company, providing comprehensive insurance services and customer management.
 
 ## Features
 
@@ -170,8 +170,8 @@ For technical support or questions:
 
 ## License
 
-This project is proprietary software owned by Insure Insurance Company. All rights reserved.
+This project is proprietary software owned by skywave Insurance Company. All rights reserved.
 
 ---
 
-**Insure Insurance Company** - Protecting what matters most since 2020.
+**skywave Insurance Company** - Protecting what matters most since 2020.
