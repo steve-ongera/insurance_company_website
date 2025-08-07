@@ -45,6 +45,99 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+     <!-- Custom Aviation & Marine Styling -->
+    <style>
+        .aviation-marine-badge {
+            background: linear-gradient(135deg, #0066cc, #004499);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .specialty-icon {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid #0066cc;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .specialty-icon:hover {
+            background: linear-gradient(135deg, #0066cc, #004499);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .specialty-icon i {
+            font-size: 2rem;
+            color: #0066cc;
+            transition: color 0.3s ease;
+        }
+        
+        .specialty-icon:hover i {
+            color: white;
+        }
+        
+        .marine-aviation-gradient {
+            background: linear-gradient(135deg, #004d7a, #008793, #0066cc);
+        }
+        
+        .service-category-header {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .coverage-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .coverage-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .coverage-list li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+        
+        .tagline-emphasis {
+            color: #0066cc;
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        .years-experience {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #333;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .sector-highlight {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 135, 147, 0.1));
+            border: 1px solid rgba(0, 102, 204, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 
@@ -80,52 +173,53 @@
         <!-- Modal Search End -->
 
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item bg-primary">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-lg-7 animated fadeInLeft">
-                                <div class="text-sm-center text-md-start">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To skywave</h4>
-                                    <h1 class="display-1 text-white mb-4">Secure Your Life With Confidence</h1>
-                                    <p class="mb-5 fs-5">skywave provides trusted coverage in the insurance sector. Our mission is to protect your future with care and commitment every step...</p>
+      <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel">
+        <div class="header-carousel-item marine-aviation-gradient">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7 animated fadeInLeft">
+                            <div class="text-sm-center text-md-start">
+                                <div class="aviation-marine-badge">✈️ Aviation & Marine Insurance Specialists</div>
+                                <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To Skywave Insurance Agency</h4>
+                                <h1 class="display-1 text-white mb-4">Safeguarding Skies and Seas</h1>
+                                <p class="mb-5 fs-5">Specialist insurance agency offering tailored risk management solutions for aviation and marine sectors. With <span class="years-experience">expert industry knowledge</span>, we protect high-value assets worldwide...</p>
 
-                                    <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Watch Video</a>
-                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn More</a>
-                                    </div>
+                                <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
+                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#services"><i class="fas fa-anchor me-2"></i> Our Services</a>
+                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Learn More</a>
                                 </div>
                             </div>
-                            <div class="col-lg-5 animated fadeInRight">
-                                <div class="calrousel-img" style="object-fit: cover;">
-                                    <img src="{% static 'img/carousel-2.png'%}" class="img-fluid w-100" alt="">
-                                </div>
+                        </div>
+                        <div class="col-lg-5 animated fadeInRight">
+                            <div class="calrousel-img" style="object-fit: cover;">
+                                <img src="{% static 'img/carousel-2.png'%}" class="img-fluid w-100" alt="Aviation and Marine Insurance">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item bg-primary">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
-                            <div class="col-lg-5 animated fadeInLeft">
-                                <div class="calrousel-img">
-                                    <img src="{% static 'img/carousel-2.png'%}" class="img-fluid w-100" alt="">
-                                </div>
+        </div>
+        <div class="header-carousel-item marine-aviation-gradient">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
+                        <div class="col-lg-5 animated fadeInLeft">
+                            <div class="calrousel-img">
+                                <img src="{% static 'img/carousel-2.png'%}" class="img-fluid w-100" alt="Professional Aviation Insurance">
                             </div>
-                            <div class="col-lg-7 animated fadeInRight">
-                                <div class="text-sm-center text-md-end">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To skywave</h4>
-                                    <h1 class="display-1 text-white mb-4">Life Insurance That Cares For You</h1>
-                                    <p class="mb-5 fs-5">skywave offers trusted plans for all your insurance needs. skywave has been a reliable name in life protection for decades...</p>
+                        </div>
+                        <div class="col-lg-7 animated fadeInRight">
+                            <div class="text-sm-center text-md-end">
+                                <div class="aviation-marine-badge">🚁 Comprehensive Coverage Solutions</div>
+                                <h4 class="text-white text-uppercase fw-bold mb-4">Aviation & Marine Expertise</h4>
+                                <h1 class="display-1 text-white mb-4">Protecting Dynamic Environments</h1>
+                                <p class="mb-5 fs-5">From aircraft hull & liability to marine cargo transit - we deliver <span class="tagline-emphasis text-white">trusted, transparent, and technically sound</span> insurance solutions for operators, owners, and manufacturers...</p>
 
-                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Watch Video</a>
-                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">Learn More</a>
-                                    </div>
+                                <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#coverage"><i class="fas fa-plane me-2"></i> Coverage Options</a>
+                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#contact">Get Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +227,8 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
+    </div>
+    <!-- Carousel End -->
 
         <!-- Feature Start -->
         <div class="container-fluid feature bg-light py-5">
@@ -191,64 +286,69 @@
 
 
        <!-- About Start -->
-        <div class="container-fluid bg-light about pb-5">
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="about-item-content bg-white rounded p-5 h-100">
-                            <h4 class="text-primary">About Our Company</h4>
-                            <h1 class="display-4 mb-4">Comprehensive Coverage With Care</h1>
-                            <p>At skywave, we’re dedicated to delivering peace of mind through trusted protection. We work to simplify insurance while keeping it personal,</p>
-                            <p>Every plan we offer is designed to serve your unique needs and goals with honesty and reliability.</p>
-                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We help protect your savings.</p>
-                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Services tailored to your life</p>
-                            <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Flexible plans that adapt to you</p>
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
+    <div class="container-fluid bg-light about pb-5" id="about">
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-item-content bg-white rounded p-5 h-100">
+                        <h4 class="text-primary">About Skywave Insurance Agency</h4>
+                        <h1 class="display-4 mb-4">Specialist Risk Management Solutions</h1>
+                        <p><strong>Skywave Insurance Agency Ltd.</strong> is a specialist insurance agency offering tailored risk management solutions for clients in the <span class="tagline-emphasis">aviation and marine sectors</span>.</p>
+                        
+                        <div class="sector-highlight">
+                            <p class="mb-2"><strong>Our Mission:</strong> To deliver trusted, transparent, and technically sound insurance solutions that protect high-value assets, promote operational resilience, and support business continuity in some of the world's most dynamic environments—air and sea.</p>
                         </div>
+
+                        <p class="text-dark"><i class="fas fa-plane text-primary me-3"></i>Aviation Insurance Specialists</p>
+                        <p class="text-dark"><i class="fas fa-anchor text-primary me-3"></i>Marine Insurance Experts</p>
+                        <p class="text-dark"><i class="fas fa-shield-alt text-primary me-3"></i>Comprehensive Risk Management</p>
+                        <p class="text-dark mb-4"><i class="fas fa-globe text-primary me-3"></i>Worldwide Coverage Solutions</p>
+                        
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#services">Explore Our Services</a>
                     </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="bg-white rounded p-5 h-100">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-12">
-                                    <div class="rounded bg-light">
-                                        <img src="{% static 'img/about-1.png'%}" class="img-fluid rounded w-100" alt="">
-                                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12">
+                                <div class="rounded bg-light">
+                                    <img src="{% static 'img/Triple-Diamond_32020f4b-7892-4f54-90ea-28d474d842de_md.webp'%}" class="img-fluid rounded w-100" alt="Aviation and Marine Insurance">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="counter-item bg-light rounded p-3 h-100">
-                                        <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
-                                            <span class="h1 fw-bold text-primary">+</span>
-                                        </div>
-                                        <h4 class="mb-0 text-dark">Insurance Policies</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">50</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
                                     </div>
+                                    <h4 class="mb-0 text-dark">Aviation Policies</h4>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="counter-item bg-light rounded p-3 h-100">
-                                        <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
-                                            <span class="h1 fw-bold text-primary">+</span>
-                                        </div>
-                                        <h4 class="mb-0 text-dark">Awards WON</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">75</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
                                     </div>
+                                    <h4 class="mb-0 text-dark">Marine Policies</h4>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="counter-item bg-light rounded p-3 h-100">
-                                        <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
-                                            <span class="h1 fw-bold text-primary">+</span>
-                                        </div>
-                                        <h4 class="mb-0 text-dark">Skilled Agents</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">15</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
                                     </div>
+                                    <h4 class="mb-0 text-dark">Industry Experts</h4>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="counter-item bg-light rounded p-3 h-100">
-                                        <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
-                                            <span class="h1 fw-bold text-primary">+</span>
-                                        </div>
-                                        <h4 class="mb-0 text-dark">Team Members</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">25</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
                                     </div>
+                                    <h4 class="mb-0 text-dark">Countries Served</h4>
                                 </div>
                             </div>
                         </div>
@@ -256,396 +356,623 @@
                 </div>
             </div>
         </div>
-        <!-- About End -->
+    </div>
+    <!-- About End -->
 
+    <!-- Service Start -->
+    <div class="container-fluid service py-5" id="services">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Services</h4>
+                <h1 class="display-4 mb-4"> Specialized Insurance Solutions</h1>
+                <p class="mb-0">Skywave offers comprehensive protection plans for aviation and marine sectors. We provide expert coverage designed to meet the complex needs of operators, owners, manufacturers, and service providers worldwide.</p>
+            </div>
 
-        <!-- Service Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Services</h4>
-                    <h1 class="display-4 mb-4">We Provide Trusted Insurance</h1>
-                    <p class="mb-0">skywave offers a wide range of protection plans. Our goal is to help secure what matters most — your health, your life, your assets, and your peace of mind.</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{% static 'img/blog-1.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="service-icon p-3">
-                                    <i class="fa fa-users fa-2x"></i>
-                                </div>
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Life Insurance</a>
-                                    <p class="mb-4">Secure your family’s future with plans tailored to support your loved ones when they need it most.</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
+            <!-- Aviation Insurance Services -->
+            <div class="service-category-header wow fadeInUp" data-wow-delay="0.2s">
+                <h2 class="text-primary mb-3"><i class="fas fa-plane me-3"></i>Aviation Insurance</h2>
+                <p class="mb-0">Comprehensive coverage solutions for all aviation operations</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/Aircraft Hull & Liability.jfif'%}" class="img-fluid rounded-top w-100" alt="Aircraft Hull and Liability Insurance">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-plane fa-2x"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{% static 'img/blog-2.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="service-icon p-3">
-                                    <i class="fa fa-hospital fa-2x"></i>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Aircraft Hull & Liability</a>
+                                <p class="mb-4">Complete coverage for private and commercial aircraft including physical damage protection and third-party liability coverage.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Hull Insurance - Physical damage coverage</li>
+                                        <li>Liability Insurance - Third party protection</li>
+                                        <li>Passenger and property damage coverage</li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Health Insurance</a>
-                                    <p class="mb-4">Affordable health plans that provide peace of mind and quick access to quality medical care.</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{% static 'img/blog-3.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="service-icon p-3">
-                                    <i class="fa fa-car fa-2x"></i>
-                                </div>
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Car Insurance</a>
-                                    <p class="mb-4">Comprehensive vehicle protection for every drive — stay secure on the road with skywave.</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{% static 'img/blog-4.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="service-icon p-3">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </div>
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Home Insurance</a>
-                                    <p class="mb-4">Protect your home and valuables from unexpected events with our reliable coverage options.</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Services</a>
                     </div>
                 </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/Hangar Keepers Liability.png'%}" class="img-fluid rounded-top w-100" alt="Hangar Keeper's Liability">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-warehouse fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Hangar Keeper's Liability</a>
+                                <p class="mb-4">Protection for facilities storing, servicing, or maintaining third-party aircraft.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Physical damage to stored aircraft</li>
+                                        <li>Loss of use compensation</li>
+                                        <li>Legal defense costs coverage</li>
+                                        <li>Premises liability protection</li>
+                                    </ul>
+                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/Marine Cargo & Transit.jpg'%}" class="img-fluid rounded-top w-100" alt="Marine Cargo Insurance">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-boxes fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Marine Cargo & Transit</a>
+                                <p class="mb-4">Protection for goods in transit by sea, air, road, or rail from origin to destination.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Institute Cargo Clause A (All risks)</li>
+                                        <li>Institute Cargo Clause B & C</li>
+                                        <li>Theft & natural disaster coverage</li>
+                                        <li>Multi-modal transport protection</li>
+                                    </ul>
+                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/yatch-blog2.webp'%}" class="img-fluid rounded-top w-100" alt="Yacht and Superyacht Insurance">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-sailboat fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Yacht & Superyacht</a>
+                                <p class="mb-4">Specialized coverage for luxury yachts and superyachts with comprehensive protection.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Hull & machinery protection</li>
+                                        <li>Crew welfare insurance</li>
+                                        <li>Cyber insurance coverage</li>
+                                        <li>Kidnap & ransom protection</li>
+                                    </ul>
+                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.3s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/blog-health.webp' %}" class="img-fluid rounded-top w-100" alt="Health Insurance">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-heartbeat fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Health Insurance</a>
+                                <p class="mb-4">Affordable and reliable health coverage for individuals, families, and corporate employees.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Inpatient & outpatient treatment</li>
+                                        <li>Chronic illness management</li>
+                                        <li>Maternity & pediatric cover</li>
+                                        <li>Emergency evacuation & ambulance</li>
+                                    </ul>
+                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{% static 'img/blog-construction.webp' %}" class="img-fluid rounded-top w-100" alt="Construction and Engineering Insurance">
+                            <div class="service-icon p-3">
+                                <i class="fas fa-hard-hat fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="d-inline-block h4 mb-4">Construction & Engineering</a>
+                                <p class="mb-4">Comprehensive protection for contractors, builders, and infrastructure developers.</p>
+                                <div class="coverage-list">
+                                    <ul class="small">
+                                        <li>Contractor’s all risk (CAR)</li>
+                                        <li>Plant & machinery insurance</li>
+                                        <li>Third-party liability cover</li>
+                                        <li>Delay in start-up protection</li>
+                                    </ul>
+                                </div>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </div>
+
+            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s" style="margin-top: 40px;">
+                <a class="btn btn-primary rounded-pill py-3 px-5" href="#contact">Get a Quote Today</a>
             </div>
         </div>
-        <!-- Service End -->
+    </div>
+    <!-- Service End -->
+
 
 
         <!-- FAQs Start -->
-        <div class="container-fluid faq-section bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="h-100">
-                            <div class="mb-5">
-                                <h4 class="text-primary">Some Important FAQ's</h4>
-                                <h1 class="display-4 mb-0">Common Frequently Asked Questions</h1>
+    <div class="container-fluid faq-section bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="h-100">
+                        <div class="mb-5">
+                            <h4 class="text-primary">Important Aviation & Marine FAQ's</h4>
+                            <h1 class="display-4 mb-0">Common Insurance Questions</h1>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Q: What makes aviation insurance different from general insurance?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body rounded">
+                                        A: Aviation insurance requires specialized knowledge of aircraft operations, regulatory requirements, and unique risks. Our experts understand the complex needs of aviation operations and provide tailored coverage that standard insurers cannot offer.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Q: How do I choose the right insurance plan?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body rounded">
-                                            A: Our advisors help assess your needs and recommend policies that suit your lifestyle and goals. Each plan is tailored for comprehensive and affordable coverage.
-                                        </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Q: Do you provide worldwide coverage for marine operations?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A: Yes, we provide global marine insurance coverage. Our policies protect vessels, cargo, and operations worldwide, ensuring comprehensive protection whether you're operating locally or internationally.
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Q: How can I file a claim with skywave?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            A: Filing a claim is simple. Submit your documents online or visit one of our branches. Our support team ensures a smooth and fast claim settlement process.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Q: What does my policy cover?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            A: Coverage varies by plan, but typical policies include life, health, property, or vehicle protection. You can customize your policy to meet your personal needs.
-                                        </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Q: How quickly can you process aviation and marine claims?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A: Our specialized claims team understands the urgency of aviation and marine incidents. We expedite processing with industry expertise, typically providing initial responses within 24-48 hours and working to minimize operational downtime.
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
-                        <img src="{% static 'img/carousel-2.png'%}" class="img-fluid w-100" alt="">
-                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                    <img src="{% static 'img/shutterstock_245307250_f29a92f8-7815-402c-b35d-711f35521b5a_md.webp'%}" class="img-fluid w-100" alt="Aviation and Marine Insurance FAQ">
                 </div>
             </div>
         </div>
-        <!-- FAQs End -->
+    </div>
+    <!-- FAQs End -->
+
 
 
         <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">From Blog</h4>
-                    <h1 class="display-4 mb-4">News And Updates</h1>
-                    <p class="mb-0">Stay informed with the latest insights, trends, and updates from skywave. Explore how we’re evolving the insurance landscape to better serve your needs.</p>
+    <div class="container-fluid blog py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Industry Insights</h4>
+                <h1 class="display-4 mb-4">Aviation & Marine News</h1>
+                <p class="mb-0">Stay informed with the latest insights, regulatory updates, and industry trends affecting aviation and marine insurance sectors. Expert analysis from Skywave Insurance Agency.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="{% static 'img/airlines-plane-222.jpg'%}" class="img-fluid rounded-top w-100" alt="Aviation Insurance Updates">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>Aviation News</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Aviation Team</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 15 Jan 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 8 Comments</div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">New Aviation Insurance Regulations for 2025</a>
+                            <p class="mb-3">Understanding the latest regulatory changes affecting aircraft operators and how they impact your insurance coverage requirements and compliance obligations.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-1.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-categiry py-2 px-4">
-                                    <span>Insurance Tips</span>
-                                </div>
-                            </div>
-                            <div class="blog-content p-4">
-                                <div class="blog-comment d-flex justify-content-between mb-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Simple Ways to Stay on Top of Your Insurance Bills</a>
-                                <p class="mb-3">Discover effective tips to manage and pay your insurance premiums on time, avoiding late fees and ensuring continuous coverage.</p>
-                                <a href="#" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="{% static 'img/18_08_4.jpg'%}" class="img-fluid rounded-top w-100" alt="Marine Insurance Trends">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>Marine Updates</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-2.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-categiry py-2 px-4">
-                                    <span>Policy Update</span>
-                                </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Marine Team</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 10 Jan 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 12 Comments</div>
                             </div>
-                            <div class="blog-content p-4">
-                                <div class="blog-comment d-flex justify-content-between mb-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">skywave’s New Digital Claims Platform</a>
-                                <p class="mb-3">We’ve launched an all-new digital claims experience. Learn how it's making filing and tracking your insurance claims easier than ever.</p>
-                                <a href="#" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
-                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Maritime Cyber Security: New Insurance Considerations</a>
+                            <p class="mb-3">As vessels become more connected, cyber risks increase. Learn how marine cyber insurance is evolving to protect against digital threats in maritime operations.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-3.png'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-categiry py-2 px-4">
-                                    <span>Industry News</span>
-                                </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="{% static 'img/drone-insurance-scaled.jpg'%}" class="img-fluid rounded-top w-100" alt="Drone Insurance Guide">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>UAV Coverage</span>
                             </div>
-                            <div class="blog-content p-4">
-                                <div class="blog-comment d-flex justify-content-between mb-3">
-                                    <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
-                                    <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
-                                    <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Insurance Trends to Watch in 2026</a>
-                                <p class="mb-3">From AI-powered underwriting to usage-based coverage, here's what to expect in the evolving insurance industry next year.</p>
-                                <a href="#" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> UAV Specialists</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 5 Jan 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 15 Comments</div>
+                            </div>
+                            <div class="small">
+                                <a href="#" class="h4 d-inline-block mb-3">Complete Guide to Commercial Drone Insurance</a>
+                                <p class="mb-3">Essential coverage options for commercial UAV operations, from payload protection to operational liability. What every drone operator needs to know.</p>
+                                <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Blog End -->
+    </div>
+    <!-- Blog End -->
 
 
         <!-- Team Start -->
-        <div class="container-fluid team pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Team</h4>
-                    <h1 class="display-4 mb-4">Meet Our Expert Team Members</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
+    <div class="container-fluid team pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Expert Team</h4>
+                <h1 class="display-4 mb-4">Aviation & Marine Insurance Specialists</h1>
+                <p class="mb-0">Our team combines deep industry knowledge with extensive insurance expertise. We understand the unique challenges of aviation and marine operations and provide specialized solutions tailored to your needs.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-1.jpg'%}" class="img-fluid rounded-top w-100" alt="Aviation Insurance Expert">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">Sarah Mitchell</h4>
+                            <p class="mb-0">Aviation Insurance Specialist</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'img/team-1.jpg'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-2.jpg'%}" class="img-fluid rounded-top w-100" alt="Marine Insurance Expert">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fas fa-phone"></i></a>
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">Captain James Rodriguez</h4>
+                            <p class="mb-0">Marine Insurance Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-3.jpg'%}" class="img-fluid rounded-top w-100" alt="Claims Specialist">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">Dr. Emily Chen</h4>
+                            <p class="mb-0">Risk Assessment Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-4.jpg'%}" class="img-fluid rounded-top w-100" alt="Client Relations Manager">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">Michael Thompson</h4>
+                            <p class="mb-0">Client Relations Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Client Testimonials</h4>
+                <h1 class="display-4 mb-4">What Our Aviation & Marine Clients Say</h1>
+                <p class="mb-0">Our clients trust us with their most valuable assets. From aircraft operators to shipping companies, see how Skywave Insurance Agency delivers peace of mind through expert coverage and exceptional service.</p>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+                <div class="testimonial-item bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-4 col-lg-4 col-xl-3">
+                            <div class="h-100">
+                                <img src="{% static 'img/testimonial-1.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="Aviation Client">
+                            </div>
+                        </div>
+                        <div class="col-8 col-lg-8 col-xl-9">
+                            <div class="d-flex flex-column my-auto text-start p-4">
+                                <h4 class="text-dark mb-0">Captain Alexandra Wright</h4>
+                                <p class="mb-3">Charter Flight Operator</p>
+                                <div class="d-flex text-primary mb-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-0">Skywave's aviation expertise is unmatched. They understand our charter operations and provided comprehensive coverage that gives us confidence on every flight. Exceptional service and technical knowledge.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'img/team-2.jpg'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                </div>
+                <div class="testimonial-item bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-4 col-lg-4 col-xl-3">
+                            <div class="h-100">
+                                <img src="{% static 'img/testimonial-2.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="Marine Client">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                        </div>
+                        <div class="col-8 col-lg-8 col-xl-9">
+                            <div class="d-flex flex-column my-auto text-start p-4">
+                                <h4 class="text-dark mb-0">David Kimani</h4>
+                                <p class="mb-3">Shipping Company CEO</p>
+                                <div class="d-flex text-primary mb-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-0">Our marine operations span multiple continents, and Skywave provides seamless global coverage. Their P&I expertise and quick claims handling have saved us significant downtime. Highly recommended.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'img/team-3.jpg'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                </div>
+                <div class="testimonial-item bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-4 col-lg-4 col-xl-3">
+                            <div class="h-100">
+                                <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="Yacht Owner Client">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'img/team-4.jpg'%}" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i class="fab fa-instagram"></i></a>
+                        <div class="col-8 col-lg-8 col-xl-9">
+                            <div class="d-flex flex-column my-auto text-start p-4">
+                                <h4 class="text-dark mb-0">Maria Santos</h4>
+                                <p class="mb-3">Superyacht Owner</p>
+                                <div class="d-flex text-primary mb-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-body"></i>
                                 </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                                <p class="mb-0">Skywave's yacht insurance coverage is comprehensive and their team understands luxury marine operations. From crew welfare to cyber security, they've covered all our unique requirements professionally.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Team End -->
+    </div>
+    <!-- Testimonial End -->
 
-        
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Testimonial</h4>
-                    <h1 class="display-4 mb-4">What Our Customers Are Saying</h1>
-                    <p class="mb-0">Choosing the right insurance company can be overwhelming. That’s why our clients love how simple, fast, and supportive our service is — delivering peace of mind when it matters most.</p>
+    <!-- Contact Section Start -->
+    <div class="container-fluid py-5" id="contact" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Contact Skywave Insurance Agency</h4>
+                <h1 class="display-4 mb-4">Get Your Aviation & Marine Quote</h1>
+                <p class="mb-0">Ready to protect your aviation or marine assets? Contact our specialists for expert advice and comprehensive coverage solutions.</p>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <h3 class="mb-4">Contact Information</h3>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="specialty-icon me-4" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Location</h5>
+                                        <p class="mb-0">Community Road, Syokimau</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="specialty-icon me-4" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Phone</h5>
+                                        <p class="mb-0">+254724878136</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="specialty-icon me-4" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Email</h5>
+                                        <p class="mb-0">skywaveinsuranceagency@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="specialty-icon me-4" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Operating Hours</h5>
+                                        <p class="mb-0">8:00 AM - 5:00 PM (Monday-Friday)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h4 class="mb-3">Download Resources</h4>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn btn-outline-primary rounded-pill py-2 px-4">
+                                    <i class="fas fa-download me-2"></i>Aviation Coverage Guide
+                                </a>
+                                <a href="#" class="btn btn-outline-primary rounded-pill py-2 px-4">
+                                    <i class="fas fa-download me-2"></i>Marine Insurance Brochure
+                                </a>
+                                <a href="#" class="btn btn-outline-primary rounded-pill py-2 px-4">
+                                    <i class="fas fa-download me-2"></i>Claims Process Guide
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="testimonial-item bg-light rounded">
-                        <div class="row g-0">
-                            <div class="col-4  col-lg-4 col-xl-3">
-                                <div class="h-100">
-                                    <img src="{% static 'img/testimonial-1.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-8 col-lg-8 col-xl-9">
-                                <div class="d-flex flex-column my-auto text-start p-4">
-                                    <h4 class="text-dark mb-0">Jessica Allen</h4>
-                                    <p class="mb-3">Small Business Owner</p>
-                                    <div class="d-flex text-primary mb-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <h3 class="mb-4">Request a Quote</h3>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
                                     </div>
-                                    <p class="mb-0">skywave made getting covered so easy! Their team explained everything clearly and helped me find the perfect plan for my business. Super reliable and fast service.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded">
-                        <div class="row g-0">
-                            <div class="col-4  col-lg-4 col-xl-3">
-                                <div class="h-100">
-                                    <img src="{% static 'img/testimonial-2.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-8 col-lg-8 col-xl-9">
-                                <div class="d-flex flex-column my-auto text-start p-4">
-                                    <h4 class="text-dark mb-0">Mohammed Khan</h4>
-                                    <p class="mb-3">Freelance Designer</p>
-                                    <div class="d-flex text-primary mb-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star text-body"></i>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
                                     </div>
-                                    <p class="mb-0">I needed personal coverage on a tight budget. skywave gave me flexible options and didn’t push anything extra. I appreciate their honesty and helpful support team.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded">
-                        <div class="row g-0">
-                            <div class="col-4  col-lg-4 col-xl-3">
-                                <div class="h-100">
-                                    <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-8 col-lg-8 col-xl-9">
-                                <div class="d-flex flex-column my-auto text-start p-4">
-                                    <h4 class="text-dark mb-0">Rebecca Moore</h4>
-                                    <p class="mb-3">Real Estate Agent</p>
-                                    <div class="d-flex text-primary mb-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star text-body"></i>
-                                        <i class="fas fa-star text-body"></i>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="phone" placeholder="Your Phone">
+                                        <label for="phone">Your Phone</label>
                                     </div>
-                                    <p class="mb-0">Filing a claim was surprisingly smooth. skywave handled everything quickly and kept me updated. While there’s room for improvement, I’d still recommend them to others.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="insurance-type">
+                                            <option value="">Select Insurance Type</option>
+                                            <option value="aviation">Aviation Insurance</option>
+                                            <option value="marine">Marine Insurance</option>
+                                            <option value="both">Both Aviation & Marine</option>
+                                        </select>
+                                        <label for="insurance-type">Insurance Type</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Tell us about your coverage needs" id="message" style="height: 120px"></textarea>
+                                        <label for="message">Coverage Requirements</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary rounded-pill py-3 px-5 w-100" type="submit">
+                                        Get Your Quote <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
-
+    </div>
+    <!-- Contact Section End -->
 
 
        {% include 'footer.html'%}
